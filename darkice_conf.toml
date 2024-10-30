@@ -6,19 +6,18 @@ realtime = yes # run the encoder with POSIX realtime priority
 rtprio = 3 # scheduling priority for the realtime threads
 
 [input]
-# device = jack; #hw:Loopback,0
-device = hw:2,1,0
-sampleRate = 44100 # sample rate in Hz. try 11025, 22050 or 44100
-bitsPerSample = 16 # bits per sample. try 16
-channel = 2     # channels. 1 = mono, 2 = stereo
-
+device = jack
+sampleRate      = 44100
+bitsPerSample   = 16
+channel         = 2
+jackClientName = darkice-jack
 [icecast2-0]
 bitrateMode = abr # average bit rate
 format = mp3 # format of the stream
 bitrate = 128 # bitrate of the stream sent to the server
-server = localhost # host name of the server
+server = 0.0.0.0 # host name of the server
 port = 8000 # port of the IceCast2 server, usually 8000
-password = hardlyHackable # source password to the IceCast2 server
+password = hardlyHackable
 mountPoint = stream # mount point of this stream on the IceCast2 server
-name = myStream # name of the stream
+name = stream # name of the stream
 description = This is a streaming

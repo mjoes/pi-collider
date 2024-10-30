@@ -1,3 +1,8 @@
+"SC_JACK_DEFAULT_OUTPUTS".setenv(
+        "darkice-jack:left,"
+        "darkice-jack:right,"
+);
+s.options.numOutputBusChannels = 2;
 s.waitForBoot {
 	Ndef(\myNote, {
 		|pitch=444| 
